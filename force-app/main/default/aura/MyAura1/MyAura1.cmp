@@ -1,0 +1,12 @@
+<aura:component controller="TestApex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<aura:attribute name="acc" type="Account" />
+<aura:attribute name="search" type="String" />
+<aura:attribute name="accounts" type="Account[]" />
+    
+
+    <lightning:input tpe="text" value="{! v.acc }" />
+    <Lightning:button label="Click me" onclick="{! c.fun }" />
+    <aura:iteration items="{!v.accounts}" var="ac" >
+    	{! ac.name }
+    </aura:iteration>
+</aura:component>

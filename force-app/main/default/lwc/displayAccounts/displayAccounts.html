@@ -1,0 +1,10 @@
+<template>
+     <h1>Accounts List</h1>
+     <lightning-input label="Enter account name" value = {searchKey}></lightning-input>
+     <lightning-button label="Show Accounts" onclick={handleClick}></lightning-button>
+     <template for:each={accounts} for:item="acc">
+        <p key={acc.Id}>
+            {acc.Id} -> {acc.Name}
+        </p>
+     </template>
+</template>

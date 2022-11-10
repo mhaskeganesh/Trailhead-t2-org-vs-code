@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="record" type="Product2" />
+    <aura:handler name="LoadEvent" event="c:PassVal" action="{!c.getValueFromEvent}"/>   
+    <lightning:card  title="{!v.record.name}">
+        <p class="slds-p-horizontal_small">
+            Product Name : {!v.record.name} <br/>
+            Product Code : {!v.record.ProductCode} <br/>
+            Product Description : {!v.record.Description} <br/>
+        </p>
+    </lightning:card>
+</aura:component>

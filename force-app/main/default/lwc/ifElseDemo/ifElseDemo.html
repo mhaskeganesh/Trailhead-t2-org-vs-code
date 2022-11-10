@@ -1,0 +1,13 @@
+<template>
+    <template if:true={checker} >
+        <div style="color:Blue;border:3px Black dotted">
+            <h1>True group</h1>
+        </div>
+    </template>
+    <template if:false={checker} >
+        <div style="color:red;border:3px red dotted">
+            <h1>False group</h1>
+        </div>
+    </template>
+    <lightning-button label="change the box" value="change the box" onclick={handle}></lightning-button>
+</template>

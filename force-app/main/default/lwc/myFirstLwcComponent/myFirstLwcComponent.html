@@ -1,0 +1,35 @@
+<template>
+<!--
+    <div class = "slds-m-around_small">
+        <h1>Hello LWC World</h1>
+        <lightning-input label = "Enter your name" id="firstName" value = {fisrtNameInput} onchange={handleChange}>
+
+        </lightning-input>
+        <p>Hello {fisrtNameInput}</p>
+        {sampleVariable}
+
+        <lightning-button label="Click here" onclick={handleClick}> here here here</lightning-button>
+    </div>
+    {result} -->
+    <div>
+        <template for:each={result} for:item="acc">
+            <p key={acc.Id}>
+                {acc.Id} {acc.Name}
+            </p>
+        </template>
+    </div>
+    
+        <template for:each={result} for:item="acc">
+            <div key={acc.Id} >
+                <lightning-card  variant="Narrow"  title={acc.Name} icon-name="standard:canvas">
+                    
+                    <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+                    <p class="slds-p-horizontal_small">{acc.Name}</p>
+                
+                </lightning-card>   
+            </div>
+        </template>
+   
+    
+
+</template>

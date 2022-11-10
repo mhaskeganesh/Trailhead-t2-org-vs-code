@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fname" type="String" />
+    <lightning:input name="first name" label="Enter first name" type="text" value="{! v.fname }" />
+    <lightning:button name="btn" label="Click" onclick="{! c.clicked }" />
+    {! v.fname }
+</aura:component>

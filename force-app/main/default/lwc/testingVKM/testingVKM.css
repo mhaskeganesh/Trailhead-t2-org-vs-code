@@ -1,0 +1,15 @@
+.exampleHolder{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.exampleHolder2{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 178, 127);
+}

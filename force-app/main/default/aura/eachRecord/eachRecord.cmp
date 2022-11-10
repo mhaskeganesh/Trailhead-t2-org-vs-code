@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ProductService" access="global" >
+<aura:registerEvent name="LoadEvent" type="c:PassVal"/>    
+    <aura:attribute name="searchProduct" type="string" />
+    <aura:attribute name="plist" type="Product2[]" /> 
+    <aura:handler name="change" value="{!v.searchProduct}" action="{!c.getProducts}"/> 
+    <!-- <lightning:button variant="base" label="Search" title="search" onclick="{!c.getProducts}" /> -->
+    <br/>
+    
+    <div class="slds-p-around_small">
+        <div class="slds-grid slds-wrap">
+            <aura:iteration items="{!v.plist}" var="prs" >
+                <!--{!prs.Name}   {!prs.ProductCode}    {!prs.Description} <br/> --> 
+                <div class="slds-col slds-size_1-of-3 slds-p-around_small" >
+                    
+                    <lightning:card title="{!prs.ProductCode}" iconName="standard:product_item" >
+                        <p class="slds-p-horizontal_small">
+                            Product Name : {!prs.Name}
+                        </p>
+                        <br/>
+                        <aura:set attribute="actions">
+                            <lightning:button name="{!prs.Name}" label="View Details" onclick="{!c.vDetails}" />
+                        </aura:set>
+                    </lightning:card>   
+                </div>
+            </aura:iteration> 
+        </div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,15 @@
+<template>
+    <template if:true={truth} >
+    <div class="exampleHolder">
+        <lightning-spinner alternative-text="Loading GSM" size="small" ></lightning-spinner>
+        Hello
+    </div> 
+</template>
+<template if:false={truth} >
+    <div class="exampleHolder2">
+        <lightning-spinner alternative-text="Loading GSM" size="small" ></lightning-spinner>
+        Hello
+    </div> 
+</template>
+    <lightning-button label="Click Here" value="Click value" onclick={handler}></lightning-button>
+</template>
