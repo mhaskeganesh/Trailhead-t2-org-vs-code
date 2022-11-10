@@ -18,5 +18,6 @@ export default class ContactCreator extends LightningElement {
 
         this.dispatchEvent(toast);
         //Added comment
+        //Adding 2nd commit
     }
 }
