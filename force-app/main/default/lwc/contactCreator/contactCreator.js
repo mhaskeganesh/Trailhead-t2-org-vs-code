@@ -17,5 +17,6 @@ export default class ContactCreator extends LightningElement {
         });
 
         this.dispatchEvent(toast);
+        //Added comment
     }
 }
